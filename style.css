@@ -1,0 +1,59 @@
+#cobra{
+        border: 2px solid rgb(91, 0, 165);
+        width: 50vw;
+        image-rendering: pixelated;
+        image-rendering: crisp-edges;
+        image-rendering: -moz-crisp-edges;
+}
+
+*{
+        color: rgb(91, 0, 165) ;
+}
+
+body{
+        background-color: black;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+}
+
+h1{
+        color: rgb(91, 0, 165);
+}
+
+p{
+        color: rgb(91, 0, 165);
+        margin: 0;
+        padding: 0;
+        font-size: 18px;
+}
+span{
+        color: rgb(91, 0, 165);
+        margin: 0;
+        padding: 0;
+        font-size: 13px;
+        animation: pisca 3s infinite;
+}
+
+#points{
+        color: rgb(5, 88, 49);
+        padding: 10px;
+        border: 2px solid rgb(5, 88, 49);
+        margin-bottom: 20px;
+}
+
+
+@keyframes pisca{
+        0%{
+                opacity: 0%;
+        }
+
+        50%{
+                opacity: 90%;
+        }
+
+        100%{
+                opacity: 0%;
+        }
+}
