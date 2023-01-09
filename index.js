@@ -1,120 +1,5 @@
-// function desenho(){
-//     var canvas = document.getElementById("cobra")
-//     var ctx = canvas.getContext('2d')
-//     var color = "rgb(39, 1, 70)"
-//     var snake = {
-//         direction: "",
-//         position: []
-//     }
-//     var every = {
-//         canvas,
-//         ctx,
-//         color,
-//         w: 0,
-//         h: 0,
-//     }
-
-//     var {snake} = newSnake(every)
-//     getMoves(every, snake)
-//     // document.addEventListener("keydown", (e) => {
-//     //     if(e.key == "ArrowUp"){
-//     //         ctx.clearRect(0,0, canvas.width, canvas.height)
-
-//     //     }
-//     // })
-
-// }
-
-// function walk(every, snake){
-//     console.log('walk')
-//     moves.ArrowUp(every, snake)
-// }
-
-// function newSnake(every){
-//     every.ctx.fillStyle = every.color
-//     every.w = Math.floor(Math.random() * every.canvas.width)
-//     every.h = Math.floor(Math.random() * every.canvas.height)
-//     every.ctx.fillRect(every.w, every.h, 1, 1)
-//     var snake = {
-//         direction: "",
-//         position: [`${every.w}, ${every.h}`]
-//     }
-//     return(every, snake)
-// }
-
-// function getMoves(every, snake){
-//     document.addEventListener('keydown', (e) => {
-//         var pressed = e.key
-//         switch(pressed){
-//             case "ArrowUp":
-//                 console.log("IP")
-//                 moves.ArrowUp(every, snake)
-//                 break;
-//             case "ArrowDown":
-//                 moves.ArrowDown(every, snake)
-//                 break;
-//             case "ArrowLeft":
-//                 moves.ArrowLeft(every, snake)
-//                 break;
-//             case "ArrowRight":
-//                 moves.ArrowRight(every, snake)
-//                 break;
-//         }
-//     })
-// }
-
-
-
-// var moves = {
-//     ArrowUp: function(every, snake){
-//         console.log(every)
-//         if(every.h == 0){
-//             alert("VOCÊ PERDEU")
-//             document.location.reload(true)
-//         }
-//         every.h = every.h - 1
-//         every.ctx.clearRect(0,0, every.canvas.width, every.canvas.height)
-//         every.ctx.fillRect(every.w, every.h, 1, 1)
-//         return every
-//     },
-
-//     ArrowDown: function(every, snake){
-//         if(every.h == every.canvas.height - 1){
-//             alert("VOCÊ PERDEU")
-//             document.location.reload(true)
-//         }
-//         every.h = every.h + 1
-//         every.ctx.clearRect(0,0, every.canvas.width, every.canvas.height)
-//         every.ctx.fillRect(every.w, every.h, 1, 1)
-//         return every
-//     },
-
-//     ArrowLeft: function(every, snake){
-//         if(every.w == 0){
-            
-//             alert("VOCÊ PERDEU")
-//             document.location.reload(true)
-//         }
-//         every.w = every.w -1
-//         every.ctx.clearRect(0,0, every.canvas.width, every.canvas.height)
-//         every.ctx.fillRect(every.w, every.h, 1, 1)
-//     },
-
-//     ArrowRight: function(every, snake){
-//         if(every.w == every.canvas.width - 1){
-            
-//             alert("VOCÊ PERDEU")
-//             document.location.reload(true)
-//         }
-//         every.w = every.w +1
-//         every.ctx.clearRect(0,0, every.canvas.width, every.canvas.height)
-//         every.ctx.fillRect(every.w, every.h, 1, 1)
-//     }
-// }
-
 var canvas = document.getElementById("cobra")
 var ctx = canvas.getContext('2d')
-
 
 
 function newSnake(){
@@ -231,8 +116,10 @@ var telas = {
 
 function vocePerdeu(){
     telaAtual = telas.INICIO
+    pontua = snake.points
     snake.points = 0
     document.getElementById("Enter").innerHTML =  "USE ENTER PARA INICIAR"
+    
     atualizarPlacar()
 }
 
@@ -256,7 +143,6 @@ function loop(){
             loop()
         }, (snake.time))
         
-        console.log("[time]", snake.time )
     }
         
     catch(err){
