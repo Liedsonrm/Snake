@@ -2,7 +2,8 @@
 
 This is a simple Snake game build with HTML, CSS and Javascript
 
-<img src=”https://github.com/Liedsonrm/Snake/blob/main/snakeStart.png” width="100px" height="100px"/>
+<img src=https://github.com/Liedsonrm/Snake/blob/main/snakeStart.png width="500px" height="600px"/>
+
 
 ## Installation
 
